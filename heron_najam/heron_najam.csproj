@@ -65,16 +65,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>autoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Automobili.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Automobili.Designer.cs">
+      <DependentUpon>Automobili.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iznajmljivanje.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Iznajmljivanje.Designer.cs">
       <DependentUpon>Iznajmljivanje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Najam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Najam.Designer.cs">
+      <DependentUpon>Najam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Automobili.resx">
+      <DependentUpon>Automobili.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Iznajmljivanje.resx">
       <DependentUpon>Iznajmljivanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Najam.resx">
+      <DependentUpon>Najam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +114,7 @@
     <None Include="autoDataSet.xss">
       <DependentUpon>autoDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

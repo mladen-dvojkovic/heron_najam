@@ -26,27 +26,40 @@ namespace heron_najam
         
         private void Iznajmljivanje_Load(object sender, EventArgs e)
         {
-            Izlistaj();
+            
+            this.najamTableAdapter.Fill(this.autoDataSet.najam);
+            //IzlistajNajam();
         }
 
-        private void Izlistaj()
+        /*private void IzlistajNajam()
         {
             using (connection = new SqlConnection(connectionString))
-            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM osobe", connection))
+            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM najam", connection))
             {
 
-                DataTable pregled = new DataTable();
-                adapter.Fill(pregled);
+                DataTable pregledNajam = new DataTable();
+                adapter.Fill(pregledNajam);
 
-                listaIznajmljivanja.DisplayMember = "ime_prezime";
-                listaIznajmljivanja.ValueMember = "Id";
-                listaIznajmljivanja.DataSource = pregled;
+                listaNajam.DisplayMember = "IdAutomobil";
+                listaNajam.ValueMember = "Id";
+                listaNajam.DataSource = pregledNajam;
             }
+        }*/
+
+        private void NoviNajam(object sender, EventArgs e)
+        {
+            Najam frm = new Najam();
+            frm.Show();
         }
 
-        private void listaIznajmljivanja_SelectedIndexChanged(object sender, EventArgs e)
+        private void PregledAuto(object sender, EventArgs e)
         {
-            MessageBox.Show(listaIznajmljivanja.SelectedValue.ToString());
+            Automobili Auti = new Automobili();
+            Auti.Show();
         }
+
+
+
+
     }
 }
