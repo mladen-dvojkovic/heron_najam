@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.autoDataSet = new heron_najam.autoDataSet();
-            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.automobiliTableAdapter = new heron_najam.autoDataSetTableAdapters.automobiliTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenasatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autoDataSet = new heron_najam.autoDataSet();
+            this.automobiliTableAdapter = new heron_najam.autoDataSetTableAdapters.automobiliTableAdapter();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -52,22 +53,8 @@
             this.dataGridView1.DataSource = this.automobiliBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(43, 37);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 215);
+            this.dataGridView1.Size = new System.Drawing.Size(344, 165);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // autoDataSet
-            // 
-            this.autoDataSet.DataSetName = "autoDataSet";
-            this.autoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // automobiliBindingSource
-            // 
-            this.automobiliBindingSource.DataMember = "automobili";
-            this.automobiliBindingSource.DataSource = this.autoDataSet;
-            // 
-            // automobiliTableAdapter
-            // 
-            this.automobiliTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -88,6 +75,25 @@
             this.cijenasatDataGridViewTextBoxColumn.HeaderText = "cijena_sat";
             this.cijenasatDataGridViewTextBoxColumn.Name = "cijenasatDataGridViewTextBoxColumn";
             // 
+            // automobiliBindingSource
+            // 
+            this.automobiliBindingSource.DataMember = "automobili";
+            this.automobiliBindingSource.DataSource = this.autoDataSet;
+            // 
+            // autoDataSet
+            // 
+            this.autoDataSet.DataSetName = "autoDataSet";
+            this.autoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // automobiliTableAdapter
+            // 
+            this.automobiliTableAdapter.ClearBeforeFill = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Automobili
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,8 +104,8 @@
             this.Text = "Automobili";
             this.Load += new System.EventHandler(this.Automobili_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +119,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenasatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

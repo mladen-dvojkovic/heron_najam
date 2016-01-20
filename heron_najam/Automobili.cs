@@ -23,5 +23,6 @@ namespace heron_najam
             this.automobiliTableAdapter.Fill(this.autoDataSet.automobili);
 
         }
+
     }
 }

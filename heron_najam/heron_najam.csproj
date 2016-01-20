@@ -60,11 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="autoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>autoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Automobili.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,17 +98,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="autoDataSet.xsc">
-      <DependentUpon>autoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="autoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>autoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="autoDataSet.xss">
-      <DependentUpon>autoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
