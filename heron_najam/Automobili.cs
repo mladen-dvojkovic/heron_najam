@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using heron_najam.DAL;
 
 namespace heron_najam
 {
@@ -19,16 +20,17 @@ namespace heron_najam
             InitializeComponent();
         }
 
-        private void Automobili_Load(object sender, EventArgs e)
+        private async void Automobili_Load(object sender, EventArgs e)
         {
-
-            dgAutomobil.DataSource = cAutomobil.GetAutomobili();
+            // Ovo je primjer kako dohvatit podatke iz baze... 
+            var auto = new AutomobilDAL();
+            var a = await auto.GetAutomobili();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cAutomobil.KreirajAuto(inputNaziv.Text);
+            //cAutomobil.KreirajAuto(inputNaziv.Text);
         }
-
+    }
 }

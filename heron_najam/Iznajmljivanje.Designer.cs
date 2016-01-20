@@ -28,34 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.autoDataSet = new heron_najam.autoDataSet();
             this.Pregled = new System.Windows.Forms.Label();
             this.listaNajam = new System.Windows.Forms.ListBox();
             this.dataGridNajam = new System.Windows.Forms.DataGridView();
-            this.najamBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.najamTableAdapter = new heron_najam.autoDataSetTableAdapters.najamTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idAutomobilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idOsobaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iznajmljenodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iznajmljendoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datumnajmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.godinanajmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.automobilMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najamMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNajam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.najamBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // autoDataSet
-            // 
-            this.autoDataSet.DataSetName = "autoDataSet";
-            this.autoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Pregled
             // 
@@ -76,73 +58,11 @@
             // 
             // dataGridNajam
             // 
-            this.dataGridNajam.AutoGenerateColumns = false;
             this.dataGridNajam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridNajam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.idAutomobilDataGridViewTextBoxColumn,
-            this.idOsobaDataGridViewTextBoxColumn,
-            this.iznajmljenodDataGridViewTextBoxColumn,
-            this.iznajmljendoDataGridViewTextBoxColumn,
-            this.datumnajmaDataGridViewTextBoxColumn,
-            this.godinanajmaDataGridViewTextBoxColumn});
-            this.dataGridNajam.DataSource = this.najamBindingSource;
             this.dataGridNajam.Location = new System.Drawing.Point(27, 56);
             this.dataGridNajam.Name = "dataGridNajam";
             this.dataGridNajam.Size = new System.Drawing.Size(747, 153);
             this.dataGridNajam.TabIndex = 2;
-            // 
-            // najamBindingSource
-            // 
-            this.najamBindingSource.DataMember = "najam";
-            this.najamBindingSource.DataSource = this.autoDataSet;
-            // 
-            // najamTableAdapter
-            // 
-            this.najamTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idAutomobilDataGridViewTextBoxColumn
-            // 
-            this.idAutomobilDataGridViewTextBoxColumn.DataPropertyName = "IdAutomobil";
-            this.idAutomobilDataGridViewTextBoxColumn.HeaderText = "IdAutomobil";
-            this.idAutomobilDataGridViewTextBoxColumn.Name = "idAutomobilDataGridViewTextBoxColumn";
-            // 
-            // idOsobaDataGridViewTextBoxColumn
-            // 
-            this.idOsobaDataGridViewTextBoxColumn.DataPropertyName = "IdOsoba";
-            this.idOsobaDataGridViewTextBoxColumn.HeaderText = "IdOsoba";
-            this.idOsobaDataGridViewTextBoxColumn.Name = "idOsobaDataGridViewTextBoxColumn";
-            // 
-            // iznajmljenodDataGridViewTextBoxColumn
-            // 
-            this.iznajmljenodDataGridViewTextBoxColumn.DataPropertyName = "iznajmljen_od";
-            this.iznajmljenodDataGridViewTextBoxColumn.HeaderText = "iznajmljen_od";
-            this.iznajmljenodDataGridViewTextBoxColumn.Name = "iznajmljenodDataGridViewTextBoxColumn";
-            // 
-            // iznajmljendoDataGridViewTextBoxColumn
-            // 
-            this.iznajmljendoDataGridViewTextBoxColumn.DataPropertyName = "iznajmljen_do";
-            this.iznajmljendoDataGridViewTextBoxColumn.HeaderText = "iznajmljen_do";
-            this.iznajmljendoDataGridViewTextBoxColumn.Name = "iznajmljendoDataGridViewTextBoxColumn";
-            // 
-            // datumnajmaDataGridViewTextBoxColumn
-            // 
-            this.datumnajmaDataGridViewTextBoxColumn.DataPropertyName = "datum_najma";
-            this.datumnajmaDataGridViewTextBoxColumn.HeaderText = "datum_najma";
-            this.datumnajmaDataGridViewTextBoxColumn.Name = "datumnajmaDataGridViewTextBoxColumn";
-            // 
-            // godinanajmaDataGridViewTextBoxColumn
-            // 
-            this.godinanajmaDataGridViewTextBoxColumn.DataPropertyName = "godina_najma";
-            this.godinanajmaDataGridViewTextBoxColumn.HeaderText = "godina_najma";
-            this.godinanajmaDataGridViewTextBoxColumn.Name = "godinanajmaDataGridViewTextBoxColumn";
             // 
             // menuStrip1
             // 
@@ -189,9 +109,7 @@
             this.Name = "Iznajmljivanje";
             this.Text = "Najam";
             this.Load += new System.EventHandler(this.Iznajmljivanje_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNajam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.najamBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -200,13 +118,10 @@
         }
 
         #endregion
-
-        private autoDataSet autoDataSet;
+        
         private System.Windows.Forms.Label Pregled;
         private System.Windows.Forms.ListBox listaNajam;
         private System.Windows.Forms.DataGridView dataGridNajam;
-        private System.Windows.Forms.BindingSource najamBindingSource;
-        private autoDataSetTableAdapters.najamTableAdapter najamTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAutomobilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idOsobaDataGridViewTextBoxColumn;
