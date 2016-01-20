@@ -28,36 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.autoDataSet = new heron_najam.autoDataSet();
-            this.automobiliTableAdapter = new heron_najam.autoDataSetTableAdapters.automobiliTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.inputNaziv = new System.Windows.Forms.TextBox();
-            this.Cijena = new System.Windows.Forms.TextBox();
             this.cijena_sat = new System.Windows.Forms.Label();
             this.dgAutomobil = new System.Windows.Forms.DataGridView();
-            this.automobiliBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.naziv_text = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAutomobil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // automobiliBindingSource
-            // 
-            this.automobiliBindingSource.DataMember = "automobili";
-            this.automobiliBindingSource.DataSource = this.autoDataSet;
-            // 
-            // autoDataSet
-            // 
-            this.autoDataSet.DataSetName = "autoDataSet";
-            this.autoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // automobiliTableAdapter
-            // 
-            this.automobiliTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
@@ -76,13 +53,6 @@
             this.inputNaziv.Size = new System.Drawing.Size(135, 20);
             this.inputNaziv.TabIndex = 2;
             // 
-            // Cijena
-            // 
-            this.Cijena.Location = new System.Drawing.Point(267, 251);
-            this.Cijena.Name = "Cijena";
-            this.Cijena.Size = new System.Drawing.Size(62, 20);
-            this.Cijena.TabIndex = 3;
-            // 
             // cijena_sat
             // 
             this.cijena_sat.AutoSize = true;
@@ -99,11 +69,6 @@
             this.dgAutomobil.Name = "dgAutomobil";
             this.dgAutomobil.Size = new System.Drawing.Size(401, 186);
             this.dgAutomobil.TabIndex = 6;
-            // 
-            // automobiliBindingSource1
-            // 
-            this.automobiliBindingSource1.DataMember = "automobili";
-            this.automobiliBindingSource1.DataSource = this.autoDataSet;
             // 
             // naziv_text
             // 
@@ -122,33 +87,24 @@
             this.Controls.Add(this.naziv_text);
             this.Controls.Add(this.dgAutomobil);
             this.Controls.Add(this.cijena_sat);
-            this.Controls.Add(this.Cijena);
             this.Controls.Add(this.inputNaziv);
             this.Controls.Add(this.button1);
             this.Name = "Automobili";
             this.Text = "Automobili";
             this.Load += new System.EventHandler(this.Automobili_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAutomobil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private autoDataSet autoDataSet;
-        private System.Windows.Forms.BindingSource automobiliBindingSource;
-        private autoDataSetTableAdapters.automobiliTableAdapter automobiliTableAdapter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox inputNaziv;
         private System.Windows.Forms.TextBox @Cijena;
         private System.Windows.Forms.Label naziv;
         private System.Windows.Forms.Label cijena_sat;
         private System.Windows.Forms.DataGridView dgAutomobil;
-        private System.Windows.Forms.BindingSource automobiliBindingSource1;
         private System.Windows.Forms.Label naziv_text;
     }
 }

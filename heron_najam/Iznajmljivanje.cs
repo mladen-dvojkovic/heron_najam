@@ -22,8 +22,7 @@ namespace heron_najam
         
         private void Iznajmljivanje_Load(object sender, EventArgs e)
         {
-            
-            this.najamTableAdapter.Fill(this.autoDataSet.najam);
+                       
         }
 
         private void NoviNajam(object sender, EventArgs e)
