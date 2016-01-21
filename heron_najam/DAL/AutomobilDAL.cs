@@ -47,7 +47,11 @@ namespace heron_najam.DAL
         }
 
         /* Drugi način unosa? */
+<<<<<<< HEAD
         /*public void KreirajAuto(string naziv, decimal cijena_sat)
+=======
+        public void KreirajAuto(string naziv, decimal cijena_sat)
+>>>>>>> origin/master
         {
             //spoji se na bazu
             using (var conn = new SqlConnection(ConnString))
@@ -59,10 +63,17 @@ namespace heron_najam.DAL
                 {
                     cmd.Parameters.AddWithValue("@inputNaziv", naziv);
                     cmd.Parameters.AddWithValue("@numCijenaPoSatu", cijena_sat);
+<<<<<<< HEAD
                     cmd.ExecuteNonQuery(); //PUCA OVDJE
                 }
             }
         }*/
+=======
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+>>>>>>> origin/master
 
         /* Izbriši automobil */
         public async Task IzbrisiAuto(int Id)

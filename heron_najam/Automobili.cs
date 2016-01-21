@@ -40,12 +40,19 @@ namespace heron_najam
             }
 
             var unesiAuto = new AutomobilDAL();
+<<<<<<< HEAD
             var VM = unesiAuto.KreirajAuto(naziv, cijena_sat); 
             //var unesiAuto = unesiAuto.KreirajAuto(AutomobilVM) { AutomobilVM naziv, cijena_sat };
             //var VM = new KreirajAuto(unesiAuto) { naziv, cijena_sat };
             //var temp_unesiAuto = await unesiAuto.KreirajAuto(naziv, cijena_sat);
             //var VM = new ViewModel.AutomobilVM() { naziv, cijena_sat };
             //unesiAuto.KreirajAuto(naziv, cijena_sat);
+=======
+            //var unesiAuto = auto.KreirajAuto(AutomobilVM) { AutomobilVM naziv, cijena_sat };
+            //AutomobilDAL.KreirajAuto(naziv, cijena_sat);
+            //var VM = new ViewModel.AutomobilVM() { naziv, cijena_sat };
+            unesiAuto.KreirajAuto(naziv, cijena_sat);
+>>>>>>> origin/master
         }
 
         private void btn_Odustani_Click(object sender, EventArgs e)
