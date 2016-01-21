@@ -22,6 +22,7 @@ namespace heron_najam.DAL
         /// Dodaj automobil u bazu podataka
         /// </summary>
         /// <param name="Naziv"></param>
+        /// <param name="CijenaSat"></param>
         /// <returns></returns>
         public async Task KreirajAuto(AutomobilVM Automobil)
         {
@@ -32,10 +33,11 @@ namespace heron_najam.DAL
                 await conn.OpenAsync();
 
                 // kreiraj naredbu na konekciji
-                using (var cmd = new SqlCommand("INSERT INTO automobili (naziv) VALUES (@inputNaziv)", conn))
+                using (var cmd = new SqlCommand("INSERT INTO automobili (naziv, cijena_sat) VALUES (@inputNaziv, @numCijenaPoSatu)", conn))
                 {
                     // dodaj vrijednost parametra @Naziv
                     cmd.Parameters.AddWithValue("@inputNaziv", Automobil.Naziv);
+                    cmd.Parameters.AddWithValue("@numCijenaPoSatu", Automobil.CijenaSat);
 
                     // izvrši query
                     await cmd.ExecuteNonQueryAsync();
@@ -43,6 +45,24 @@ namespace heron_najam.DAL
                 }
             }
         }
+
+        /* Drugi način unosa? */
+        /*public void KreirajAuto(string naziv, decimal cijena_sat)
+        {
+            //spoji se na bazu
+            using (var conn = new SqlConnection(ConnString))
+            {
+                // otvori konekciju
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO automobili(naziv, cijena_sat) VALUES (@inputNaziv, @numCijenaPoSatu)"))
+                {
+                    cmd.Parameters.AddWithValue("@inputNaziv", naziv);
+                    cmd.Parameters.AddWithValue("@numCijenaPoSatu", cijena_sat);
+                    cmd.ExecuteNonQuery(); //PUCA OVDJE
+                }
+            }
+        }*/
 
         /* Izbriši automobil */
         public async Task IzbrisiAuto(int Id)

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Pregled = new System.Windows.Forms.Label();
-            this.listaNajam = new System.Windows.Forms.ListBox();
             this.dataGridNajam = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,14 +46,6 @@
             this.Pregled.Size = new System.Drawing.Size(153, 13);
             this.Pregled.TabIndex = 0;
             this.Pregled.Text = "Pregled iznajmljenih automobila";
-            // 
-            // listaNajam
-            // 
-            this.listaNajam.FormattingEnabled = true;
-            this.listaNajam.Location = new System.Drawing.Point(28, 268);
-            this.listaNajam.Name = "listaNajam";
-            this.listaNajam.Size = new System.Drawing.Size(521, 108);
-            this.listaNajam.TabIndex = 1;
             // 
             // dataGridNajam
             // 
@@ -100,9 +91,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 433);
+            this.ClientSize = new System.Drawing.Size(786, 324);
             this.Controls.Add(this.dataGridNajam);
-            this.Controls.Add(this.listaNajam);
             this.Controls.Add(this.Pregled);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -120,7 +110,6 @@
         #endregion
         
         private System.Windows.Forms.Label Pregled;
-        private System.Windows.Forms.ListBox listaNajam;
         private System.Windows.Forms.DataGridView dataGridNajam;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAutomobilDataGridViewTextBoxColumn;
